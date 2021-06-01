@@ -23,7 +23,7 @@ try{
         stage('Build, Test and Package'){
             echo "Building the Spring boot application..."
             sh "${mavenCMD} clean package"
-            sh "java -jar target/*.jar"
+            sh "java -jar target/*.jar &"
         }
        
         
