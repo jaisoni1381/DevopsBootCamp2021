@@ -23,7 +23,9 @@ try{
         stage('Build, Test and Package'){
             echo "Building the Spring boot application..."
             sh "${mavenCMD} clean package"
+            sh "java -jar target/my-test-app*.jar"
         }
+       
         
         stage('Sonar Scan'){
             echo "Scanning application for vulnerabilities..."
